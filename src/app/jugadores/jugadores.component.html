@@ -1,4 +1,14 @@
-<div>
-    <h2>Jugadores disponibles</h2>
-    <!-- Aquí irán los botones de jugadores -->
-  </div>
+<button
+  *ngFor="let jugador of jugadores"
+  class="jugador-btn"
+  [ngClass]="{
+    'disponible': !estaSeleccionado(jugador),
+    'seleccionado': estaSeleccionado(jugador),
+    'presionado': presionando === jugador
+  }"
+  (mousedown)="onMouseDown(jugador)"
+  (mouseup)="onMouseUp(jugador)"
+>
+<span>{{ jugador.nombre }} {{ jugador.apellido }}</span>
+
+</button>

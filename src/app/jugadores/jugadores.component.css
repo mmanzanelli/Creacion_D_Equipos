@@ -1,0 +1,61 @@
+.botonera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  
+  .jugador-btn {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: 150px;
+    flex: 1 1 150px;
+    margin-bottom: 0.5rem;
+  }
+
+  .disponible {
+    background-color: orange;
+  }
+  
+  .seleccionado {
+    background-color: green;
+  }
+  
+  
+  /* Mantiene el fondo original y aplica efecto encima */
+.jugador-btn.presionado::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: rgba(255, 255, 255, 0.3); /* semitransparente */
+  animation: presionProlongada 0.8s linear forwards;
+  z-index: 1;
+}
+
+/* El contenido del botón va encima del overlay */
+.jugador-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes presionProlongada {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+  
+  

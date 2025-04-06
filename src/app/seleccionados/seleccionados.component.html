@@ -1,4 +1,8 @@
 <div>
-    <h2>Seleccionados</h2>
-    <!-- Aquí irá la lista de jugadores seleccionados -->
-  </div>
+  <h2>Seleccionados</h2>
+  <ul>
+    <li *ngFor="let jugador of jugadores">
+      {{ jugador.nombre }} {{ jugador.apellido }}
+    </li>
+  </ul>
+</div>

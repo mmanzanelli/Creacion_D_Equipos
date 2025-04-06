@@ -3,10 +3,39 @@
     <img src="assets/logo.png" alt="Logo" height="60">
   </header>
 
-  <app-navbar></app-navbar>
+  <app-navbar (agregarJugador)="onMostrarFormulario()"></app-navbar>
+
+  <div *ngIf="mostrarFormulario" class="formulario">
+    <h3>Añadir jugador</h3>
+    <form (ngSubmit)="agregarJugador()">
+      <input placeholder="Nombre" [(ngModel)]="jugadorNuevo.nombre" name="nombre" required>
+      <input placeholder="Apellido" [(ngModel)]="jugadorNuevo.apellido" name="apellido" required>
+      <input type="number" placeholder="Ataque" [(ngModel)]="jugadorNuevo.puntuacionAtaque" name="ataque">
+      <input type="number" placeholder="Creación" [(ngModel)]="jugadorNuevo.puntuacionCreacion" name="creacion">
+      <input type="number" placeholder="Defensa" [(ngModel)]="jugadorNuevo.puntuacionDefensa" name="defensa">
+      <input type="number" placeholder="Portero" [(ngModel)]="jugadorNuevo.puntuacionPortero" name="portero">
+      <label>
+        Disponible:
+        <input type="checkbox" [(ngModel)]="jugadorNuevo.disponible" name="disponible">
+      </label>
+      <button type="submit">Guardar jugador</button>
+    </form>
+  </div>
 
   <main class="main-layout">
-    <app-jugadores class="jugadores"></app-jugadores>
-    <app-seleccionados class="seleccionados"></app-seleccionados>
+    <app-jugadores
+  class="jugadores"
+  [jugadores]="grupoActual.jugadores"
+  [seleccionados]="seleccionados"
+  (seleccionar)="alSeleccionarJugador($event)"
+  (longClick)="alDesmarcarJugador($event)"
+></app-jugadores>
+
+
+<app-seleccionados
+class="seleccionados"
+[jugadores]="seleccionados"
+></app-seleccionados>
+
   </main>
 </div>
