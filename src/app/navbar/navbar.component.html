@@ -1,7 +1,36 @@
 <nav class="navbar">
-    <button>Ver grupo </button>
+  <div class="botones">
+    <button (click)="seleccionarGrupo()">Ver grupo ▼</button>
+    <div class="menu-grupo" *ngIf="mostrarMenuGrupo">
+      <ul>
+        <li *ngFor="let grupo of gruposDisponibles" (click)="cambiarGrupo(grupo)">
+          {{ grupo }}
+        </li>
+      </ul>
+    </div>
+    
     <button class="activo">Jugadores</button>
     <button (click)="onClickAgregar()">Añadir jugador</button>
-    <button>Jugadores por equipo </button>
-    <button>Armar equipo</button>
-  </nav>
+    <button (click)="toggleMenuJugadores()">Jugadores por equipo ▼</button>
+    <div class="menu-jugadores" *ngIf="mostrarMenuJugadores">
+      <ul>
+        <li *ngFor="let cantidad of jugadoresOpciones" (click)="seleccionarCantidadJugadores(cantidad)">
+          {{ cantidad }} jugadores
+        </li>
+      </ul>
+    </div>
+    
+    <button (click)="onArmarEquipos()">Armar equipo</button>
+    <button (click)="resetearDatos()">Resetear datos</button>
+
+  </div>
+
+  <div class="info-barra">
+    <div class="grupo">
+      Grupo seleccionado: {{ grupoSeleccionado }}
+    </div>
+    <div class="jugadores-equipo">
+      Jugadores por equipo: {{ jugadoresPorEquipo }}
+    </div>
+  </div>
+</nav>

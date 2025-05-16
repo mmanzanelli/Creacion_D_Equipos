@@ -1,14 +1,24 @@
-<button
-  *ngFor="let jugador of jugadores"
-  class="jugador-btn"
-  [ngClass]="{
-    'disponible': !estaSeleccionado(jugador),
-    'seleccionado': estaSeleccionado(jugador),
-    'presionado': presionando === jugador
-  }"
-  (mousedown)="onMouseDown(jugador)"
-  (mouseup)="onMouseUp(jugador)"
->
-<span>{{ jugador.nombre }} {{ jugador.apellido }}</span>
+<div>
+  <h2>Jugadores disponibles</h2>
 
-</button>
+  <div *ngIf="jugadores.length === 0" class="mensaje-vacio">
+    No hay jugadores en este grupo.
+  </div>
+
+  <div class="botonera" *ngIf="jugadores.length > 0">
+    <button
+      *ngFor="let jugador of jugadores"
+      class="jugador-btn"
+      [ngClass]="{
+        'disponible': !estaSeleccionado(jugador),
+        'seleccionado': estaSeleccionado(jugador),
+        'presionado': presionando === jugador
+      }"
+      (mousedown)="onMouseDown(jugador)"
+      (mouseup)="onMouseUp(jugador)"
+    >
+      <span>{{ jugador.nombre }} {{ jugador.apellido }}</span>
+    </button>
+  </div>
+</div>
+

@@ -1,0 +1,19 @@
+
+            ATAQUE CREACION DEFENSA PORTERO
+1. Tomás 50, 40, 50, 10
+2. Vicent 40, 50, 50, 10
+3. Maxi 40, 40, 40, 10
+4. Diego C 40, 30, 40, 40 
+5. Toni 60, 60, 60, 10
+6. Joaco 80, 80, 80, 30 
+7. Christian 50, 40, 70, 30
+8. 
+9. Pucho 60, 50, 60, 10
+10. Joaquin 50, 60, 60, 20
+11. Moncho 60, 50, 60, 20
+12. Zurdo 70, 60, 60, 10
+13. Andres 40, 50, 40, 10
+14. Kevin 70, 60, 70, 30
+15. Folch 70, 70, 50, 20
+16. Maick 60, 60, 50, 30 
+17. Dante 40, 40, 40, 20  

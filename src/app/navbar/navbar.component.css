@@ -1,19 +1,83 @@
 .navbar {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    background-color: #1976d2;
-  }
-  
-  .navbar button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #ffffff;
-    cursor: pointer;
-  }
-  
-  .navbar .activo {
-    background-color: #bbdefb;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #1976d2;
+}
+
+.botones {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar .activo {
+  background-color: #bbdefb;
+}
+
+.info-barra {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+  background-color: #1565c0;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+.menu-grupo {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+  margin-top: 0.5rem;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-grupo ul {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.menu-grupo li {
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+
+.menu-grupo li:hover {
+  background-color: #eeeeee;
+}
+
+.menu-jugadores {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+  margin-top: 0.5rem;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-jugadores ul {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.menu-jugadores li {
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+
+.menu-jugadores li:hover {
+  background-color: #eeeeee;
+}
