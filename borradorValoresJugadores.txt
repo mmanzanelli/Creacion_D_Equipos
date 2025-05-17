@@ -1,5 +1,5 @@
 
-            ATAQUE CREACION DEFENSA PORTERO
+       ATAQUE CREACION DEFENSA PORTERO
 1. Tomás 50, 40, 50, 10
 2. Vicent 40, 50, 50, 10
 3. Maxi 40, 40, 40, 10
@@ -7,7 +7,10 @@
 5. Toni 60, 60, 60, 10
 6. Joaco 80, 80, 80, 30 
 7. Christian 50, 40, 70, 30
-8. 
+8. Valentino 
+
+
+       ATAQUE CREACION DEFENSA PORTERO
 9. Pucho 60, 50, 60, 10
 10. Joaquin 50, 60, 60, 20
 11. Moncho 60, 50, 60, 20
@@ -17,3 +20,25 @@
 15. Folch 70, 70, 50, 20
 16. Maick 60, 60, 50, 30 
 17. Dante 40, 40, 40, 20  
+
+       ATAQUE CREACION DEFENSA PORTERO
+1. Tomás 
+2. Vicent 
+3. Maxi 
+4. Diego C  
+5. Toni 
+6. Joaco  
+7. Christian 
+8. Valentino 
+
+
+     ATAQUE CREACION DEFENSA PORTERO
+9. Pucho 
+10. Joaquin 
+11. Moncho 
+12. Zurdo 
+13. Andres 
+14. Kevin 
+15. Folch 
+16. Maick  
+17. Dante   
